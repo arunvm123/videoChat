@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 
@@ -40,6 +41,7 @@ func main() {
 
 	m := handlers.LoggingHandler(os.Stdout, r)
 
+	log.Println("Server running on :8080")
 	err := http.ListenAndServe(":8080", m)
 	if err != nil {
 		panic(err)
