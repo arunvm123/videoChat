@@ -1,0 +1,68 @@
+<html> 
+ 
+   <head> 
+      <title>WebRTC Video Demo</title>
+   </head>
+	
+   <style>
+    .videoElement
+    {
+        transform: rotateY(180deg);
+        -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+        -moz-transform:rotateY(180deg); /* Firefox */
+    }
+
+      body { 
+         background: #eee; 
+         padding: 5% 0; 
+      } 
+		
+      video {  
+         border: 1px solid gray; 
+      }
+		
+      .call-page { 
+         position: relative; 
+         display: block; 
+         margin: 0 auto; 
+         width: 500px; 
+         height: 500px; 
+      } 
+		
+      #localVideo { 
+         width: 150px; 
+         height: 150px; 
+         position: absolute; 
+         top: 15px; 
+         right: 15px;
+         z-index: 999; 
+      }
+		
+      #remoteVideo { 
+         width: 500px; 
+         height: 500px; 
+      }
+		
+   </style>
+   <body>
+        <div id = "loginPage" class = "container text-center"> 
+            <h2>WebRTC Video Demo. Please sign in</h2> 
+            <label for = "usernameInput">Login</label> 
+            <input type = "email" id = "usernameInput" placeholder = "Login" 
+                required = "" autofocus = ""> 
+            <button id = "loginBtn">Sign in</button>
+        </div>
+            
+        <div id = "callPage" class = "call-page"> 
+            <video class="videoElement" id = "localVideo" autoplay></video> 
+            <video class="videoElement" id = "remoteVideo" autoplay></video>
+            <div> 
+            <input id = "callToUsernameInput" type = "text"
+                placeholder = "username to call" /> 
+            <button id = "callBtn" >Call</button> 
+            <button id = "hangUpBtn">Hang Up</button> 
+            </div>	
+        </div>
+<script src = "static/client.js"></script> 
+   </body>	
+</html>	
