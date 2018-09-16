@@ -11,3 +11,8 @@ go run main.go
 - In a new tab, point to localhost:8080
 - Enter a new username
 - In the field under the box enter the first username and click Call
+
+# Docker
+```bash
+docker run --rm --publish 8080:8080 arunvm/videochat
+```
